@@ -1,4 +1,4 @@
 flask
 flask_session
-gnuicorn
+gunicorn
 sqlite3
