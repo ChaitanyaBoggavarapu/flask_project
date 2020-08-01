@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+   <body>
+      <table border = 1>
+         <thead>
+            <td>ID</td>
+            <td>name</td>
+            <td>Travelled</td>
+            <td>Travelling_Spring_break</td>
+            <td>Expected_return_date</td>
+            <td>Symptoms</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["ID"]}}</td>
+               <td>{{row["name"]}}</td>
+               <td> {{ row["Travelled"]}}</td>
+               <td>{{row['Travelling_Spring_break']}}</td>
+               <td>{{row['Expected_return_date']}}</td>	
+               <td>{{row['Symptoms']}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+   </body>
+</html>

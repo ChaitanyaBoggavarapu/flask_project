@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form-CoronaVirus</title>
+        <!--Using Style for all headers and Paragraphs-->
+        <style>
+        h1{
+            color: blueviolet;
+            text-align: center;
+        }
+        p{
+            color: blue;
+            text-align: left;
+        }
+    </style>
+    </head>
+    <body>
+        <h1 style="color: blueviolet;text-align: center;">Corona-Virus(Covid-19) Information form</h1>
+        <form action = "{{ url_for('addrec') }}" method = "POST">
+
+            <input type="text" placeholder="Full Name" name="name">
+            <input type="text" placeholder="ID" name="ID">
+            <ol>
+            <li><p style="color:blue">Have you travelled Outside New mexico Recently?</p></li>    
+                <p>Yes <input type="radio" name="Travelled" value="Yes"> </p>   
+                <p>No <input type="radio" name="Travelled" value="No"> </p>   
+            <li><p style="color:blue">Are you planning to travel outside New mexico in spring break?</p></li>    
+                <p>Yes <input type="radio" name="Planning" value="Yes"> </p>   
+                <p>No <input type="radio" name="Planning" value="No"> </p>   
+            <li><p>Expected returned Back </p></li>
+            <input type="date" placeholder="MM/DD/YYYY" name="Date">
+            <li><p style="color:blue">Do you feel symptoms like cough or fever?</p></li>
+                <p>Yes <input type="radio" name="CheckingSymptomns" value="Yes"> </p>   
+                <p>No <input type="radio" name="CheckingSymptomns" value="No"> </p>   
+            </ol>
+            <button type="submit">Submit!</button>
+
+        </form>
+        <h1>We will not share your information to others without your consent</h1>
+    </body>
+</html>
